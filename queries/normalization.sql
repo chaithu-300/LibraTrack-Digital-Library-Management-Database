@@ -1,4 +1,3 @@
-DROP DATABASE IF EXISTS LibraTrack;
 CREATE DATABASE LibraTrack;
 USE LibraTrack;
 
