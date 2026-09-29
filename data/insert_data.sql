@@ -152,46 +152,46 @@ INSERT INTO book_authors (book_id, author_id) VALUES
 
 -- book_copies (40)
 INSERT INTO book_copies (copy_id, book_id, shelf_location, status) VALUES
-(1, 1, 'F6-40', 'Available'),   -- CHANGED (loan 5 returned)
+(1, 1, 'F6-40', 'Available'),  
 (2, 1, 'C7-26', 'Available'),
 (3, 2, 'F5-68', 'Available'),
 (4, 2, 'C2-11', 'Available'),
-(5, 3, 'D2-19', 'Available'),   -- CHANGED (loan 6 returned)
+(5, 3, 'D2-19', 'Available'),  
 (6, 4, 'E4-74', 'Available'),
 (7, 5, 'C3-54', 'Available'),
 (8, 6, 'A4-57', 'Available'),
 (9, 7, 'C3-66', 'Available'),
 (10, 8, 'E5-88', 'Available'),
-(11, 8, 'F9-11', 'Issued'),     -- still out (loan 13)
+(11, 8, 'F9-11', 'Issued'),     
 (12, 9, 'F9-48', 'Available'),
 (13, 10, 'F2-27', 'Available'),
 (14, 11, 'C2-23', 'Damaged'),
 (15, 12, 'F9-29', 'Available'),
 (16, 12, 'C5-87', 'Available'),
 (17, 12, 'B6-36', 'Available'),
-(18, 13, 'F5-74', 'Available'), -- CHANGED (loan 14 returned)
-(19, 14, 'D5-16', 'Issued'),    -- still out (loan 18)
+(18, 13, 'F5-74', 'Available'), 
+(19, 14, 'D5-16', 'Issued'),    
 (20, 14, 'A7-45', 'Available'),
 (21, 15, 'A1-52', 'Available'),
 (22, 16, 'B5-30', 'Available'),
-(23, 17, 'F8-80', 'Issued'),    -- still out (loan 8)
+(23, 17, 'F8-80', 'Issued'),   
 (24, 17, 'F7-81', 'Available'),
 (25, 18, 'A2-19', 'Available'),
 (26, 18, 'F3-79', 'Available'),
-(27, 19, 'A6-84', 'Available'), -- CHANGED (loan 11 returned)
+(27, 19, 'A6-84', 'Available'), 
 (28, 20, 'E3-65', 'Available'),
 (29, 21, 'B1-49', 'Available'),
 (30, 21, 'C1-55', 'Available'),
 (31, 22, 'B4-95', 'Available'),
 (32, 23, 'A6-81', 'Available'),
 (33, 24, 'D3-40', 'Lost'),
-(34, 25, 'B3-62', 'Issued'),    -- still out (loan 12)
+(34, 25, 'B3-62', 'Issued'),  
 (35, 26, 'A3-52', 'Available'),
 (36, 27, 'D4-44', 'Available'),
 (37, 27, 'B2-58', 'Available'),
 (38, 28, 'A8-38', 'Available'),
 (39, 29, 'B8-54', 'Available'),
-(40, 30, 'C4-38', 'Available'); -- CHANGED (loan 20 returned)
+(40, 30, 'C4-38', 'Available'); 
 -- loans (20)
 INSERT INTO loans (loan_id, copy_id, member_id, issue_date, due_date, return_date) VALUES
 (1, 2, 4, '2026-06-19', '2026-07-03', '2026-07-05'),
