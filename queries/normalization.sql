@@ -1,17 +1,6 @@
 
 USE LibraTrack;
 
-SELECT f.fine_id, f.loan_id
-FROM fines f
-JOIN loans l ON f.loan_id = l.loan_id
-WHERE l.return_date IS NULL;
-
-UPDATE loans SET return_date = '2026-09-26'
-WHERE loan_id IN (5, 6, 11, 14, 20);
-
-UPDATE book_copies SET status = 'Available'
-WHERE copy_id IN (1, 5, 18, 27, 40);
-
 -- 1. No duplicate book-author pairs (D8: M:N via book_authors)
 SELECT book_id, author_id, COUNT(*) AS duplicate_count
 FROM book_authors
