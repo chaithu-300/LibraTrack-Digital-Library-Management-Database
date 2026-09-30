@@ -52,7 +52,7 @@ INSERT INTO authors (author_id, name, country) VALUES
 
 -- members (25)
 INSERT INTO members (member_id, name, email, phone, membership_date, status) VALUES
-(1, 'Dr. Cynthia Allen', 'dr..cynthia.allen1@example.com', '9891171822', '2025-01-08', 'Active'),
+(1, 'Dr. Cynthia Allen', 'dr.cynthia.allen1@example.com', '9891171822', '2025-01-08', 'Active'),
 (2, 'Carmen Rose', 'carmen.rose2@example.com', '9896383465', '2024-01-03', 'Active'),
 (3, 'Barbara Walker', 'barbara.walker3@example.com', '9850983930', '2022-04-29', 'Active'),
 (4, 'Crystal Whitehead', 'crystal.whitehead4@example.com', '9851834738', '2022-08-10', 'Active'),
@@ -64,7 +64,7 @@ INSERT INTO members (member_id, name, email, phone, membership_date, status) VAL
 (10, 'Erik Williams', 'erik.williams10@example.com', '9878820812', '2022-04-25', 'Inactive'),
 (11, 'Scott Powell', 'scott.powell11@example.com', '9893990916', '2025-01-04', 'Active'),
 (12, 'Emily Green', 'emily.green12@example.com', '9853462475', '2026-04-04', 'Active'),
-(13, 'Alexandra Howell', 'alexandra.howell13@example.com', '9891183842', '2026-04-11', 'Active'),
+(13, 'Alexandra Howell', 'alexandra.howell13@example.com', '9891183842', '2026-04-01', 'Active'),
 (14, 'Sherry Wood', 'sherry.wood14@example.com', '9827849808', '2023-05-16', 'Inactive'),
 (15, 'Teresa Taylor', 'teresa.taylor15@example.com', '9811824493', '2025-04-15', 'Active'),
 (16, 'Mark Baker', 'mark.baker16@example.com', '9874016400', '2023-07-13', 'Suspended'),
@@ -198,22 +198,22 @@ INSERT INTO loans (loan_id, copy_id, member_id, issue_date, due_date, return_dat
 (2, 13, 24, '2026-05-30', '2026-06-13', '2026-06-17'),
 (3, 26, 20, '2026-05-25', '2026-06-08', '2026-06-05'),
 (4, 22, 13, '2026-04-05', '2026-04-19', '2026-04-19'),
-(5, 18, 9, '2026-03-10', '2026-03-24', '2026-09-12'),
-(6, 5, 14, '2026-08-29', '2026-09-12', '2026-07-20'),
+(5, 18, 9, '2026-03-10', '2026-03-24', '2026-09-26'),
+(6, 5, 14, '2026-08-29', '2026-09-12', '2026-09-26'),
 (7, 36, 18, '2026-06-01', '2026-06-15', '2026-06-15'),
-(8, 23, 12, '2026-07-03', '2026-07-17', '2026-05-06'),
+(8, 23, 12, '2026-07-03', '2026-07-17', NULL),
 (9, 38, 22, '2026-03-15', '2026-03-29', '2026-03-31'),
 (10, 37, 22, '2026-06-30', '2026-07-14', '2026-07-14'),
-(11, 27, 17, '2026-03-11', '2026-03-25', '2026-09-21'),
-(12, 34, 14, '2026-03-29', '2026-04-12', '2026-07-20'),
-(13, 11, 23, '2026-06-17', '2026-07-01', '2026-09-26'),
-(14, 1, 5, '2026-04-28', '2026-05-12', '2026-02-15'),
+(11, 27, 17, '2026-03-11', '2026-03-25', '2026-09-26'),
+(12, 34, 14, '2026-03-29', '2026-04-12', NULL),
+(13, 11, 23, '2026-06-17', '2026-07-01', NULL),
+(14, 1, 5, '2026-04-28', '2026-05-12', '2026-09-26'),
 (15, 4, 22, '2026-09-08', '2026-09-22', '2026-09-21'),
 (16, 9, 20, '2026-03-23', '2026-04-06', '2026-04-10'),
 (17, 6, 18, '2026-07-26', '2026-08-09', '2026-08-09'),
-(18, 19, 10, '2026-06-26', '2026-07-10', '2026-07-20'),
+(18, 19, 10, '2026-06-26', '2026-07-10', NULL),
 (19, 25, 19, '2026-07-31', '2026-08-14', '2026-08-16'),
-(20, 40, 15, '2026-07-12', '2026-07-26', '2026-09-21');
+(20, 40, 15, '2026-07-12', '2026-07-26', '2026-09-26');
 
 -- reservations (8)
 INSERT INTO reservations (reservation_id, book_id, member_id, reserved_on, status) VALUES
@@ -226,14 +226,18 @@ INSERT INTO reservations (reservation_id, book_id, member_id, reserved_on, statu
 (7, 10, 8, '2026-08-07', 'Pending'),
 (8, 26, 7, '2026-08-22', 'Fulfilled');
 
--- fines (6)
+-- fines (10)
 INSERT INTO fines (fine_id, loan_id, amount, paid_status, paid_on) VALUES
-(1, 14, 685.0, 'Paid', '2026-09-18'),
-(2, 6, 70.0, 'Paid', '2026-09-14'),
-(3, 20, 310.0, 'Paid', '2026-08-08'),
-(4, 11, 925.0, 'Paid', '2026-07-25'),
+(1, 14, 685.0, 'Paid', '2026-09-27'),
+(2, 6, 70.0, 'Paid', '2026-09-27'),
+(3, 20, 310.0, 'Paid', '2026-09-28'),
+(4, 11, 925.0, 'Paid', '2026-09-28'),
 (5, 19, 10.0, 'Unpaid', NULL),
-(6, 5, 930.0, 'Unpaid', NULL);
+(6, 5, 930.0, 'Unpaid', NULL),
+(7, 1, 10.0, 'Paid', '2026-07-05'),
+(8, 2, 20.0, 'Paid', '2026-06-17'),
+(9, 9, 10.0, 'Unpaid', NULL),
+(10, 16, 20.0, 'Unpaid', NULL);
 
 
 -- ============================================================
