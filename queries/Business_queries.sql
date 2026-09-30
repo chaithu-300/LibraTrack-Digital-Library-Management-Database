@@ -201,7 +201,7 @@ join fines as f
 on l.loan_id = f.loan_id
 where paid_status = 'unpaid'
 group by p.publisher_id , p.name
-order by amount_owe;
+order by amount_owe desc;
 
 -- Which books currently have zero available copies?
 select b.book_id , b.title 
