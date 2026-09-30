@@ -4,7 +4,7 @@ CREATE DATABASE LibraTrack;
 USE LibraTrack;
 
 /* Table creation */
-CREATE TABLE members (member_id INT PRIMARY KEY, name VARCHAR(50), email VARCHAR(50), phone VARCHAR(15), membership_date DATE,
+CREATE TABLE members (member_id INT PRIMARY KEY, name VARCHAR(50), email VARCHAR(50) UNIQUE, phone VARCHAR(15) UNIQUE, membership_date DATE,
   status VARCHAR(50));
 
 CREATE TABLE authors (author_id INT PRIMARY KEY, name VARCHAR(50), country VARCHAR(50));
