@@ -5,7 +5,10 @@ select b.book_id, b.title, count(l.loan_id) as borrowed_frequency
 from books as b
 join book_copies as bc 
 on b.book_id = bc.book_id
-join loans as lUSE LibraTrack;
+join loans as l
+on bc.copy_id = l.copy_id
+group by b.book_id , b.title
+order by borrowed_frequency desc;
 
 -- which books are borrowed more frequently?
 select b.book_id, b.title, count(l.loan_id) as borrowed_frequency
