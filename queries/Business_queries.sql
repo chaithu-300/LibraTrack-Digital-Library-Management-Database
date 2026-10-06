@@ -20,8 +20,8 @@ order by total_loans desc;
 
 -- Which authors have the most borrowed books?
 select a.name, a.author_id, count(l.loan_id) as book_borrowed
-from book_authors as ba
-join authors as a
+from authors as a
+join book_authors as ba
 on a.author_id = ba.author_id
 join book_copies as bc
 on ba.book_id = bc.book_id
