@@ -262,5 +262,5 @@ FROM (
     UNION ALL
     SELECT 'reservations' AS table_name, 8 AS expected_rows, (SELECT COUNT(*) FROM reservations) AS actual_rows
     UNION ALL
-    SELECT 'fines' AS table_name, 6 AS expected_rows, (SELECT COUNT(*) FROM fines) AS actual_rows
+    SELECT 'fines' AS table_name, 10 AS expected_rows, (SELECT COUNT(*) FROM fines) AS actual_rows
 ) AS row_count_check;
